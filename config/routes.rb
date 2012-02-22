@@ -1,4 +1,6 @@
 TutoDevise::Application.routes.draw do
+  devise_for :users
+
   get "pages/index"
 
   resources :posts
