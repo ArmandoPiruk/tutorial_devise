@@ -18,3 +18,14 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 6) Adicionar o root :to ao routes.rb
 root :to => 'pages#index'
+
+7) Criar um model para o devise
+# eu criarei um model 'user' mas poderia ser qualquer nome
+rails generate devise user
+
+8) Adicionar no controller que sera protegido
+before_filter :authenticate_user!
+
+
+
+
