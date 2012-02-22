@@ -1,34 +1,31 @@
-Tutorial::Usando Rails (3.2.1) com Devise (2.0.0)
+Tutorial::Usando Rails (3.2.1) com Devise (2.0.0)\n
+O Projeto abrira com a pagina no \pages\index e a autenticação sera necessaria para a pagina \posts\*\n
 
-1) Instalar a gem devise
+1) Instalar a gem devise\n
 gem install devise
 
-2) Adcionar ao Gemfile do projeto
+2) Adcionar ao Gemfile do projeto\n
 gem 'devise'
 
-3) Executar o bundle
+3) Executar o bundle\n
 bundle install
 
-4) Instalar o Devise
-# dentro da pasta do projeto
+4) Instalar o Devise\n
+# dentro da pasta do projeto\n
 rails generate devise:install
 
-5) Editar o arquivo \config\environments\development.rb e adicionar a linha:
-config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+5) Editar o arquivo \config\environments\development.rb e adicionar a linha:\n
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }\n
 
-6) Adicionar o root :to ao routes.rb
+6) Adicionar o root :to ao routes.rb\n
 root :to => 'pages#index'
 
-7) Criar um model para o devise
-# eu criarei um model 'user' mas poderia ser qualquer nome
+7) Criar um model para o devise\n
+# eu criarei um model 'user' mas poderia ser qualquer nome\n
 rails generate devise user
 
-8) Adicionar no controller que sera protegido
+8) Adicionar no controller que sera protegido\n
 before_filter :authenticate_user!
 
-9) Copiar as views do devise para o projeto
+9) Copiar as views do devise para o projeto\n
 rails generate devise:views
-
-
-
-
